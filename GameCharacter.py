@@ -1,0 +1,57 @@
+class GameCharacter:
+    _name = str
+    _health = 100
+    _mana = 1
+    _level = 1
+    def __init__(self, name):
+        self._name = name
+        self._health = 100
+        self._mana = 50
+        self._level = 1
+    @property
+    def name(self):
+        return self._name
+    
+    @property
+    def health(self):
+        return self._health
+
+    @health.setter
+    def health(self, new_health):
+        if new_health < 0:
+            self._health = 0
+        elif new_health > 100:
+            self._health = 100
+        else:
+            self._health = new_health
+    @property
+    def mana(self):
+        return self._mana
+
+    @mana.setter
+    def mana(self, new_mana):
+        if new_mana < 0:
+            self._mana = 0
+        elif new_mana > 50:
+            self._mana = 50
+        else:
+            self._mana = new_mana
+    @property
+    def level(self):
+        return self._level
+
+    def level_up(self):
+        self._level += 1
+        self.health = 100
+        self.mana = 50
+        print(f"{self.name} leveled up to {self.level}!")
+    def __str__(self):
+        stats = {
+            "Name": self.name,
+            "Level": self.level,
+            "Health": self.health,
+            "Mana": self.mana
+        }
+        return "\n".join(f"{key}: {value}" for key, value in stats.items())
+         
+        
