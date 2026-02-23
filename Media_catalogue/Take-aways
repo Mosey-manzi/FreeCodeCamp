@@ -22,4 +22,11 @@ This Python lab is a practical exercise on **Object-Oriented Programming (OOP)**
 * Add **movies** and **TV series** to a catalogue.  
 * Display a **formatted list** of movies and TV series separately.  
 * Validate inputs such as title, year, duration, seasons, and total episodes.  
-* Handle invalid additions with **custom exceptions**.
+* Handle invalid additions with **custom exceptions**.  
+
+---
+
+## Sample Output
+
+Here’s what the catalogue looks like when printed:
+
